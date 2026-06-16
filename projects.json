@@ -1,0 +1,24 @@
+
+
+[
+  {
+    "title":"Application Pharmacie",
+    "category":"web",
+    "image":"images/pharmacy.jpg",
+    "description":"Gestion de pharmacie."
+  },
+
+  {
+    "title":"Application Moto Track",
+    "category":"mobile",
+    "image":"images/moto.jpg",
+    "description":"Suivi de véhicules."
+  },
+
+  {
+    "title":"Assistant IA",
+    "category":"ai",
+    "image":"images/ai.jpg",
+    "description":"Chatbot intelligent."
+  }
+]
