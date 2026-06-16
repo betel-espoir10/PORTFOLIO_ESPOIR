@@ -1,0 +1,722 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* ################################## */
+/* Style Global */
+/* ################################## */
+
+*{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family:Arial, sans-serif;
+ outline: none;
+ border: none;
+ text-decoration: none;
+ list-style: none;
+ scroll-behavior: smooth;
+}
+
+:root{
+  --red:rgb(148, 3, 3);
+  --bg:rgb(71, 74, 75);
+  --bg2:#204163;
+  --light:#f1f1f1;
+  --link:rgb(155,40,40);
+}
+
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body{
+  background: var(--bg);
+  color: var(--light);
+  position: relative;
+}
+
+section{
+  /* padding: 10rem 7% 2rem;
+  min-height: 100vh; */
+  padding:6rem 9% 3rem;
+}
+
+span{
+  color: var(--red);
+}
+
+.btn{
+  display: inline-block;
+  color: var(--light);
+  border: 1px solid var(--light);
+  padding: 1rem 2.8rem;
+  border-radius: 2rem;
+  transition: 2s ease-in-out;
+  font-size: 2rem;
+}
+
+.btn:hover{
+  background: var(--red);
+  color: var(--light);
+  box-shadow: 0 0 1rem var(--red);
+}
+
+/* ################################## */
+/* Header et Navigation */
+/* ################################## */
+
+header{
+  position: fixed;
+  z-index: 100;
+  background: var(--bg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.sticky {
+  border-bottom: 1rem solid rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width:775px){
+.logo{
+  font-size: 5rem;
+  color: var(--light);
+  font-weight: 1000;
+  }
+}
+
+.logo span{
+  font-weight: 600;
+}
+
+.navigation a {
+  font-size: 1.7rem;
+  color: var(--light);
+  margin-left: 4rem;
+  transition: 2s ease-in-out;
+  position: relative;
+}
+
+.navigation a::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: var(--red);
+  transition: width 1s ease-in-out;
+}
+
+.navigation a:hover, .navigation a.active{
+  color: var(--red);
+}
+
+.navigation a:hover::before, .navigation a.active::before{
+  width: 100%;
+}
+
+#menu-burger{
+  font-size: 3.6rem;
+  cursor: pointer;
+  color: var(--light);
+  display: none;
+  
+} 
+
+.light-mode{
+    --bg:#ffffff;
+    --light:#111111;
+    --grey:#f5f5f5;
+}
+
+/* ################################## */
+/* Section Home */
+/* ################################## */
+
+.home{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height:100vh;
+}
+.home-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    animation: animimg.4s ease-in-out infinite;
+    background: var(--red);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid var(--light);
+    
+}
+
+.home-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@keyframes animimg {
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+  margin-bottom: 2rem;
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content p {
+  font-size: 1.6rem;  
+}
+
+.social-media a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  font-size: 2.5rem;
+  color: var(--red);
+  border-radius: 1px 1.5rem 3rem 0;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: background 2s ease-in-out;
+  
+}
+
+.social-media a:hover {
+  background: var(--red);
+  box-shadow: 0 0 1rem var(--red);
+  color: var(--light);
+}
+
+/* ################################## */
+/* A propos  */
+/* ################################## */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--bg2);
+  border: 0.1rem solid var(--light);
+  margin: 4rem;
+  border-radius: 2rem;
+  min-height:auto;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 400px;
+    background: var(--red);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid var(--light);
+}
+
+.about-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 30px;
+}
+
+.about-content h2 {
+  text-align: center;
+  line-height: 1.2;
+ 
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+  padding: 5rem;
+}
+
+/* ################################## */
+/* Section Service */
+/* ################################## */
+
+.services{
+  border: 0.1rem solid var(--light);
+  margin: 4rem;
+  border-radius: 2rem;
+  min-height:auto;
+}
+.services h2{
+  margin-bottom: 5rem;
+}
+
+.services-content {
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services-box {
+  flex: 1 1 20rem;
+  background: var(--bg2);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.1rem solid var(--light);
+  transition: .2s ease-in-out;
+
+}
+
+.services-box:hover {
+  border-color: var(--red);
+  transform: scale(1.02);
+}
+
+.services-box i {
+  font-size: 7rem;
+  color: var(--red);
+}
+
+.services-box h3 {
+  font-size: 2.6rem;
+
+}
+
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+.services-box a{
+  border: 0.1rem solid var(--light);
+}
+
+/* ################################## */
+/* Section Statistique */
+/* ################################## */
+
+    .stats{
+        border: 0.1rem solid var(--light);
+        margin: 4rem;
+        border-radius: 2rem;
+        min-height:auto;
+    }
+
+    .stat-content{
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .stat-box{
+        flex: 1 1 20rem;
+        background: var(--bg2);
+        padding: 3rem 2rem 4rem;
+        border-radius: 2rem;
+        text-align: center;
+        border: 0.1rem solid var(--light);
+        transition: .2s ease-in-out;
+    }
+
+    .stat-box h3 {
+      font-size: 2.6rem;
+    }
+
+    .stat-box p {
+      font-size: 1.6rem;
+      margin: 1rem 0 3rem;
+    }
+
+    .counter{
+        font-size:4rem;
+        color:var(--red);
+        text-align: center;
+    }
+
+/* ################################## */
+/* Section Portfolio */
+/* ################################## */
+
+.portfolio {
+  background: var(--bg2);
+  border: 0.1rem solid var(--light);
+  margin: 4rem;
+  border-radius: 2rem;
+
+}
+
+.portfolio h2 {
+  margin-bottom: 4rem;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  align-items: center;
+  gap: 2rem;
+  
+}
+
+.portfolio-box{
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.portfolio-box img {
+  width: 100%;
+  transition: .2s ease-in-out;
+}
+
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0.1),var(--red));
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0%);
+}
+
+.portfolio-layer h4 {
+  font-size: 3rem;
+}
+
+.portfolio-layer p {
+  font-size: 1.6rem;
+  margin: 3rem 0 1rem;  
+}
+
+.portfolio-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--light);
+  border-radius: 50%;
+}
+
+.portfolio-layer a i {
+  font-size: 2rem;
+  color: var(--bg2);
+}
+
+/* ################################## */
+/* Section Contact */
+/* ################################## */
+.contact{
+  border: 0.1rem solid var(--light);
+  margin: 4rem;
+  border-radius: 2rem;
+  min-height:auto;
+}
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  width: 100%;
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+ 
+}
+
+.contact form .input-box {
+  display: flex;
+  gap:1.5rem;
+  margin-bottom:1.5rem;
+ 
+}
+
+.contact form .input-box input, .contact form textarea{
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--light);
+  background: var(--bg2);
+  border-radius: .8rem;
+  margin: 0.7rem 0;
+  border: 0.01rem solid var(--light);
+ 
+}
+
+.contact form .input-box input{
+  flex:1;
+  padding: 10px;
+  
+}
+
+.contact form textarea{
+  resize: none;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 2rem;
+}
+
+form input[type="submit"]{
+  cursor:pointer;
+  background:none;
+}
+
+/*Message Toast apres remplissage du formulaire*/
+
+    #toast{
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30px);
+    min-width: 320px;
+    max-width: 500px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    z-index: 9999;
+    opacity: 0;
+    transition: all .4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,.3);
+    font-weight: 500;
+}
+
+    #toast.show{
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+/* ################################## */
+/* Section Footer */
+/* ################################## */
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--bg2);
+}
+
+.footer-txt{
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--bg2);
+  border: 1px solid var(--light);
+  border-radius: 50%;
+  color: var(--light);
+  font-size: 1.6rem;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  transition: background .2s ease-in-out;
+}
+
+.footer-iconTop a:hover {
+  background: var(--red);
+  color: var(--light);
+  box-shadow: 0 0 1rem var(--red);
+}
+
+.footer-iconTop .btn-home .btnDisplay{
+  display: inline-flex;
+}
+
+/* ################################## */
+/* Break Points - Elements Responsives */
+/* ################################## */
+
+@media screen and (max-width:1100px) {
+   html{
+     font-size: 55%;
+   }
+}
+
+@media screen and (max-width:992px){
+  nav{
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .stat, .portfolio {
+    padding-bottom: 5rem;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .contact {
+    min-width: auto;
+  }
+  footer{
+    padding: 2rem 3%;
+  }
+
+}
+
+@media screen and (max-width:775px) {
+
+  #menu-burger{
+    display:block;
+  }
+
+  .navigation{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:var(--bg);
+    display:flex;
+    flex-direction:column;
+    transform:translateY(-20px);
+    opacity:0;
+    visibility:hidden;
+    transition:all .4s ease;
+  }
+
+  .navigation.active{
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+  }
+
+  .navigation a{
+    display:block;
+    padding:1.5rem 3rem;
+    margin:0;
+    font-size:2rem;
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+
+  .navigation a::before{
+    display:none;
+  }
+
+    .home-img,
+    .about-img{
+        width: 80vw;
+        max-width: 320px;
+        margin: 2rem auto;
+    }
+
+    .home-img img,
+    .about-img img{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+@media screen and (max-width:550px){
+  html {
+     font-size: 50%;
+  }
+   .contact form .input-box{
+      flex-direction:column;
+  }
+
+  .contact form .input-box input{
+      width:100%;
+  }
+}
+
+@media screen and (max-width:350px){
+  .home-img img, .about img {
+    width: 90vw;
+    max-width: 100%;    
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
