@@ -199,7 +199,11 @@ header.sticky {
 }
 
 .home-content p {
-  font-size: 1.6rem;  
+  font-size: 1.8rem; 
+  line-height: 3rem; 
+  text-align: justify;
+  margin: 2rem 0 3rem;
+  padding: 5rem;
 }
 
 .social-media a{
@@ -274,9 +278,11 @@ header.sticky {
 }
 
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin: 2rem 0 3rem;
   padding: 5rem;
+  line-height: 3rem;
+  text-align: justify;
 }
 
 /* ################################## */
@@ -328,8 +334,11 @@ header.sticky {
 }
 
 .services-box p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin: 1rem 0 3rem;
+  line-height: 2rem;
+  text-align: justify;
+  padding: 2rem;
 }
 
 .services-box a{
