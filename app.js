@@ -76,6 +76,8 @@ window.addEventListener('scroll', () => {
 
 });
 
+
+
 //Section statistique des realisations projects et experiences.
 
 // const counters = document.querySelectorAll(".counter");

@@ -92,7 +92,7 @@
     <h3 class="section-title">A <span>propos</span></h3>
     <h3>Ingénieur de formation en Ingénierie Logicielle et IA - INES (Rwanda)</h3>
 
-    <p>Ingénieur de formation en Ingénerie Logicielle à l'Institut National d'Enseignement Supérieur (INES -Rwanda ), passionné du développement Web et Mobile et de la protection des systèmes et données, je mets à profit une solide formation en Génie Informatique(option génie logiciel) et une approche approfondie dans la conception et la réalisation des systèmes d'information sécurisés. Doté d'un esprit analytique et d'une rigueur méthodologique, j'ai la capacité de m'intégrer facilement dans une équipe, d'écouter et faire preuve de la responsabilité qui m'incombe. En outre, je nourris une grande passion pour l'analyse des données et l'intelligences artificielle.</p>
+    <p>Ingénieur de formation en Ingénierie Logicielle à l'Institut National d'Enseignement Supérieur (INES -Rwanda ), passionné du développement Web et Mobile et de la protection des systèmes et données, je mets à profit une solide formation en Génie Informatique(option génie logiciel) et une approche approfondie dans la conception et la réalisation des systèmes d'information sécurisés. Doté d'un esprit analytique et d'une rigueur méthodologique, j'ai la capacité de m'intégrer facilement dans une équipe, d'écouter et faire preuve de la responsabilité qui m'incombe. En outre, je nourris une grande passion pour l'analyse des données et l'intelligences artificielle.</p>
  
       <a
       href="./assets/CV_BETEL_ESPOIR.pdf"
@@ -265,7 +265,20 @@ L'Intelligence Artificielle n'est plus une option, c'est un accélérateur de pe
         <input type="text" id="subject" name="subject" placeholder="Sujet">
        </div>
         <textarea id="message" name="message" placeholder="Message"></textarea>
-        <input type="submit" value="Envoyer" class="btn">
+        <div class="contact-buttons">
+
+          <button type="submit" class="btn">
+              Envoyer le message
+          </button>
+          <a
+              href="https://wa.me/23598220034?text=Bonjour%20BETEL%20Espoir,%20je%20viens%20de%20visiter%20votre%20portfolio%20et%20je%20souhaite%20vous%20contacter."
+              target="_blank"
+              class="btn whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i>
+              WhatsApp
+          </a>
+
+      </div>
       </form>
     </section>
 
@@ -282,15 +295,27 @@ L'Intelligence Artificielle n'est plus une option, c'est un accélérateur de pe
       
       </div>
     </footer>
-
-
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="app.js"></script>
-  <script src="javascript/contact.js"></script>
-  <script src="javascript/theme.js"></script>
   
   <div id="toast"></div>
+
+  <!-- Floating WhatsApp -->
+      <a href="https://wa.me/23598220034?text=Bonjour%20BETEL%20Espoir,%20je%20viens%20de%20visiter%20votre%20portfolio%20et%20je%20souhaite%20discuter%20avec%20vous."
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Discuter sur WhatsApp">
+          <span class="whatsapp-tooltip">
+              Discutons sur WhatsApp
+          </span>
+          <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <!-- Script Javascript -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="app.js"></script>
+        <script src="javascript/contact.js"></script>
+        <script src="javascript/theme.js"></script>
+        <script src="javascript/whatsapp.js"></script>
 </body>
 </html>
