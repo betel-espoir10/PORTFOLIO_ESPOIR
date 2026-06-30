@@ -1,8 +1,3 @@
-//inialisation de EmailJS
-
-(function () {
-  emailjs.init("RGwHmd5Ug21E8HHj3");
-})();
 
 const sections = document.querySelectorAll('section');
 const linksNav = document.querySelectorAll('.navigation a');
@@ -11,35 +6,6 @@ const btnHome = document.querySelector('.btn-home');
 const menuIcon = document.querySelector('#menu-burger');
 const nav = document.querySelector('.navigation');
 
-//Validation des champs avant l'envoi des donnees
-function validateForm(){
-
-    const name=document.querySelector('[name="name"]');
-    const email=document.querySelector('[name="email"]');
-    const message=document.querySelector('[name="message"]');
-        if(name.value.trim()===""){
-            showToast("Veuillez saisir votre nom","warning");
-            name.focus();
-            return false;
-        }
-        if(email.value.trim()===""){
-            showToast("Veuillez saisir votre email","warning");
-            email.focus();
-            return false;
-        }
-        const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(!emailRegex.test(email.value)){
-            showToast("Adresse email invalide","warning");
-            email.focus();
-            return false;
-        }
-        if(message.value.trim().length < 20){
-            showToast("Le message doit contenir au moins 20 caractères","warning");
-            message.focus();
-            return false;
-        }
-    return true;
-}
 
 const burgerActive = () =>{
   console.log("Menu cliqué");
@@ -110,33 +76,6 @@ window.addEventListener('scroll', () => {
 
 });
 
-
-//Configuration de l'envoi d'un email
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  if(!validateForm()){
-        return;
-    }
-  emailjs.sendForm(
-      'service_26a9487',
-      'template_5bdvfov',
-      this
-  )
-  .then((response) => {
-      console.log("SUCCESS", response)
-      showToast("Message envoyé avec succès !","success");
-      form.reset();
-  })
-  .catch((error) => {
-        console.log("STATUS :", error.status);
-        console.log("TEXT :", error.text);
-        console.log("ERROR :", error);
-        showToast("Erreur lors de l'envoi","error");
-  });
-});
-
 //Section statistique des realisations projects et experiences.
 
 // const counters = document.querySelectorAll(".counter");
@@ -168,44 +107,6 @@ form.addEventListener('submit', function(e){
 //     });
 //     observerCounter.observe(statsSection);
 
-//Animation mode sombre/claire
 
-const themeBtn = document.getElementById("theme-toggle");
-    console.log(document.getElementById("theme-toggle"));
-    console.log(themeBtn);
-themeBtn.addEventListener("click",()=>{
-   
-    document.body.classList.toggle("light-mode");
-    if(document.body.classList.contains("light-mode")){
-        localStorage.setItem("theme","light");
-        themeBtn.classList.remove("fa-moon");
-        themeBtn.classList.add("fa-sun");
-    }else{
-        localStorage.setItem("theme","dark");
-        themeBtn.classList.remove("fa-sun");
-        themeBtn.classList.add("fa-moon");
-    }
-});
 
-//fonction showToast
-
-    function showToast(message,type="success"){
-        const toast=document.getElementById("toast");
-        let icon="";
-
-          if(type==="success"){
-              icon="✅ ";
-          }
-          if(type==="error"){
-              icon="❌ ";
-          }
-          if(type==="warning"){
-              icon="⚠️ ";
-          }
-          toast.innerHTML=icon + message;
-          toast.className=`show ${type}`;
-          setTimeout(()=>{
-              toast.className="";
-          },3000);
-    }
       
