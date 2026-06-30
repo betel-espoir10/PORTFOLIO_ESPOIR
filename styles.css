@@ -93,11 +93,12 @@ header.sticky {
 }
 
 .logo span{
-  font-weight: 600;
+  font-weight: 800;
+  color: white;
 }
 
 .navigation a {
-  font-size: 1.7rem;
+  font-size: 2.0rem;
   color: var(--light);
   margin-left: 4rem;
   transition: 2s ease-in-out;
