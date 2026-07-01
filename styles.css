@@ -261,6 +261,7 @@ header.sticky {
 .home-content h3 {
   font-size: 3.2rem;
   font-weight: 700;
+  
 }
 
 .home-content h3:nth-of-type(2){
@@ -279,6 +280,9 @@ header.sticky {
   text-align: justify;
   margin: 2rem 0 3rem;
   padding: 2rem;
+}
+.home-content span{
+  color: var(--light);
 }
 
 .social-media a{
