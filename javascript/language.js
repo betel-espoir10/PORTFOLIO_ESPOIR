@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener("click", async () => {
             const lang = item.dataset.lang;
             await loadLanguage(lang);
+            initTyped(lang);
             localStorage.setItem("language", lang);
             selectedFlag.src =
             `images/${lang === "fr" ? "frchs" : "enghs"}.png`;

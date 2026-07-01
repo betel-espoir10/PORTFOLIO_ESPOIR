@@ -47,14 +47,34 @@ ScrollReveal().reveal('.home-img, .services-content, .portfolio-box, .contact-fo
 ScrollReveal().reveal('.home-content h1, .about-img',{origin: 'left'});
 ScrollReveal().reveal('.home-content p, .about-content',{origin: 'left'});
 
-const typed = new Typed('.multiple',{
+let typed;
+function initTyped(lang) {
+    if (typed) {
+        typed.destroy();
+    }
+    const strings = {
+        fr: [
+            "Développeur Web & Mobile",
+            "Data Analyst",
+            "Web Designer",
+            "Passionné par l'IA"
+        ],
+        en: [
+            "Web & Mobile Developer",
+            "Data Analyst",
+            "Web Designer",
+            "AI Enthusiast"
+        ]
+    };
 
-  strings: ["Développeur Web et mobile", "Data Analyste", "Web Designer", "Passionné de l'IA"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop:true
-})
+    typed = new Typed(".multiple", {
+        strings: strings[lang],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+}
 
 //refermer automatiquement le menuIcon une fois etre ouvert
 menuIcon.addEventListener('click', burgerActive);
@@ -75,6 +95,9 @@ window.addEventListener('scroll', () => {
   nav.classList.remove('active');
 
 });
+
+const currentLanguage = localStorage.getItem("language") || "fr";
+initTyped(currentLanguage);
 
 
 

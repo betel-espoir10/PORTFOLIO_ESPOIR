@@ -3,5 +3,17 @@
   "menu_about":"About",
   "menu_services":"Services",
   "menu_portfolio":"Portfolio",
-  "menu_contact":"Contact"
+  "menu_contact":"Contact",
+
+   "home_greeting":"Hello, I'm",
+    "home_name":"BETEL Espoir",
+    "home_intro": "and I am a",
+    "home_description":"Welcome to my technological world. I define myself as a determined mind working at the intersection of Web & Mobile Development, Web Design, and Data Analysis. Deeply fascinated by Artificial Intelligence, I don't just follow the trends; I strive to lead them. For me, every line of code is an opportunity for innovation, and every day is a new learning ground. Convinced that excellence is cultivated day after day, I dedicate every moment to enriching my skills and pushing my boundaries to bring future projects to life. Guided by an insatiable passion, I transform complex concepts into concrete, seamless, and secure solutions.",
+    "contact_me":"Contact Me",
+
+    "about_word1": "About",
+    "about_word2": "Me",
+    "about_subtitle":"Engineer by training in Software Engineering and AI - INES (Rwanda)",
+    "about_description":"Engineer by training in Software Engineering at the National Institute of Higher Education (INES - Rwanda), I am passionate about web and mobile development and systems and data security. I leverage my strong background in Computer Engineering (with a specialization in software engineering) and my in-depth approach to the design and implementation of secure information systems. Possessing an analytical mind and methodological rigor, I can easily integrate into a team, listen attentively, and demonstrate a strong sense of responsibility. Furthermore, I have a deep interest in data analysis and artificial intelligence.",
+    "read_more":"Download my CV"
 }
