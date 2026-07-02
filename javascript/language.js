@@ -19,7 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 element.textContent = data[key];
             }
         });
+// Traduction des contenus HTML (avec <span>, <strong>, etc.)
+        document.querySelectorAll("[data-lang-html]").forEach(element => {
+            const key = element.dataset.langHtml;
+            if (data[key]) {
+                element.innerHTML = data[key];
+            }
+        });
     }
+
 
     selected.addEventListener("click", () => {
         menu.classList.toggle("active");

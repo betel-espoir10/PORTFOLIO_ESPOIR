@@ -15,5 +15,26 @@
     "about_word2": "Me",
     "about_subtitle":"Engineer by training in Software Engineering and AI - INES (Rwanda)",
     "about_description":"Engineer by training in Software Engineering at the National Institute of Higher Education (INES - Rwanda), I am passionate about web and mobile development and systems and data security. I leverage my strong background in Computer Engineering (with a specialization in software engineering) and my in-depth approach to the design and implementation of secure information systems. Possessing an analytical mind and methodological rigor, I can easily integrate into a team, listen attentively, and demonstrate a strong sense of responsibility. Furthermore, I have a deep interest in data analysis and artificial intelligence.",
-    "read_more":"Download my CV"
+    "read_more":"Download my CV",
+    
+   "services_title": "My <span>Services</span>",
+
+  "service_web_title": "Web and Mobile Development",
+  "service_web_description": "Take your vision from idea to digital reality. Don't settle for just an online presence; demand a high-performance infrastructure. I design and develop custom web and mobile applications, focused on user experience (UX) and optimized for speed. From robust back-end architecture to fluid front-end interfaces, every line of code is crafted to support your business growth and deliver a seamless experience.",
+
+  "service_data_title": "Data Analytics",
+  "service_data_description": "Transform your raw data into strategic decisions. Your data holds hidden opportunities; my role is to make them talk. Thanks to in-depth expertise in data cleaning, modeling and visualization, I translate complexity into clear and actionable dashboards. Stop guessing your next steps: manage your business with precision based on reliable indicators and predictive insights.",
+
+  "service_security_title": "Software Security",
+  "service_security_description": "Protect your most valuable assets before it's too late. In the digital age, digital trust is your greatest asset. I integrate security into the very heart of your application development lifecycle (DevSecOps). Through vulnerability analysis, the implementation of strict encryption protocols, and code auditing, I build an impenetrable wall around your systems to guarantee the confidentiality and integrity of your data from end to end.",
+
+  "service_ai_title": "Artificial Intelligence",
+  "service_ai_description": "Automate excellence and anticipate the future. Artificial Intelligence is no longer an option, it is a performance accelerator. Whether it is automating redundant processes, designing intelligent agents or integrating machine learning models, I develop intelligent solutions adapted to your business challenges. Get a head start in your market with algorithmic innovation.",
+
+  "service_button": "Contact Me",
+
+  "portfolio_title":"My <span>Projects</span>",
+  "project1_title":"Pharmaceutical Management System",
+  "project1_description":"Pharma Logone est conçu est pour aider les phamaciens et caissiers."
+
 }
