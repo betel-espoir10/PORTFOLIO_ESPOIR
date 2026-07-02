@@ -35,6 +35,14 @@
 
   "portfolio_title":"My <span>Projects</span>",
   "project1_title":"Pharmaceutical Management System",
-  "project1_description":"Pharma Logone est conçu est pour aider les phamaciens et caissiers."
+  "project1_description":"Pharma Logone est conçu est pour aider les phamaciens et caissiers.",
+
+  "contact_title":"Contact<span> Me </span>",
+  "contact_name": "Your full name",
+  "contact_email": "Your email address",
+  "contact_subject": "Subject",
+  "contact_message": "Your message",
+  "send_message": "Send Message",
+  "contact_whatsapp": "WhatsApp"
 
 }

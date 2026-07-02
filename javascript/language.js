@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 element.innerHTML = data[key];
             }
         });
+
+// Traduction des placeholders
+        document.querySelectorAll("[data-lang-placeholder]").forEach(element => {
+            const key = element.dataset.langPlaceholder;
+            if (data[key]) {
+                element.placeholder = data[key];
+            }
+        });
     }
 
 
