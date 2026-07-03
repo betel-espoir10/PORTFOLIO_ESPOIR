@@ -64,6 +64,12 @@ span{
   box-shadow: 0 0 1rem var(--red);
 }
 
+.section-title {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 30px;
+}
+
 /* ################################## */
 /* Header et Navigation */
 /* ################################## */
@@ -340,21 +346,20 @@ header.sticky {
     object-fit: cover;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 4.5rem;
-  margin-bottom: 30px;
-}
-
 .about-content h2 {
   text-align: center;
   line-height: 1.2;
  
 }
-
-.about-content h3 {
-  font-size: 2.6rem;
+.about-content .about-title h3{
+   text-align: center;
+   font-size: 4.5rem;
+   margin-bottom: 30px;
 }
+
+ .about-content h2 {
+  font-size: 2.6rem;
+} 
 
 .about-content p {
   font-size: 1.8rem;
@@ -425,50 +430,6 @@ header.sticky {
 }
 
 /* ################################## */
-/* Section Statistique */
-/* ################################## */
-
-    .stats{
-        border: 0.1rem solid var(--light);
-        margin: 4rem;
-        border-radius: 2rem;
-        min-height:auto;
-    }
-
-    .stat-content{
-        display: flex ;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    .stat-box{
-        flex: 1 1 20rem;
-        background: var(--bg2);
-        padding: 3rem 2rem 4rem;
-        border-radius: 2rem;
-        text-align: center;
-        border: 0.1rem solid var(--light);
-        transition: .2s ease-in-out;
-    }
-
-    .stat-box h3 {
-      font-size: 2.6rem;
-    }
-
-    .stat-box p {
-      font-size: 1.6rem;
-      margin: 1rem 0 3rem;
-    }
-
-    .counter{
-        font-size:4rem;
-        color:var(--red);
-        text-align: center;
-    }
-
-/* ################################## */
 /* Section Portfolio */
 /* ################################## */
 
@@ -535,7 +496,10 @@ header.sticky {
 
 .portfolio-layer p {
   font-size: 1.6rem;
-  margin: 3rem 0 1rem;  
+  margin: 3rem 0 1rem; 
+  max-width:90%;
+  text-align:center;
+ 
 }
 
 .portfolio-layer a {
@@ -882,6 +846,37 @@ footer{
     padding:1.2rem 2rem;
     height:70px;
 }
+
+.social-media{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:1.4rem;
+        margin:2.5rem 0;
+        flex-wrap:wrap;
+    }
+    .social-media a{
+            width:4.2rem;
+            height:4.2rem;
+            font-size:3rem;
+            margin: 0.5em;;
+        }
+    .portfolio-layer h4{
+        font-size:1.7rem;
+        margin-bottom:.6rem;
+    }
+
+    .portfolio-layer p{
+        font-size:1.15rem;
+        line-height:1.5;
+        margin-bottom:1rem;
+    }
+
+    .portfolio-layer a{
+    width:4rem;
+    height:4rem;
+    font-size:1.8rem;
+    }
 
   .navigation a::before{
     display:none;

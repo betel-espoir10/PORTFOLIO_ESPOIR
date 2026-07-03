@@ -101,37 +101,4 @@ initTyped(currentLanguage);
 
 
 
-//Section statistique des realisations projects et experiences.
-
-// const counters = document.querySelectorAll(".counter");
-
-//     const startCounters = () => {
-//         counters.forEach(counter => {
-//             const target = +counter.dataset.target;
-//             let count = 0;
-//             const updateCounter = () => {
-//                 const increment = target / 50;
-//                 if(count < target){
-//                     count += increment;
-//                     counter.innerText = Math.ceil(count);
-//                     requestAnimationFrame(updateCounter);
-//                 }else{
-//                     counter.innerText = target + "+";
-//                 }
-//             }
-//             updateCounter();
-//         });
-// }
-
-//     const statsSection = document.querySelector(".stats");
-//     const observerCounter = new IntersectionObserver(entries=>{
-//         if(entries[0].isIntersecting){
-//             startCounters();
-//             observerCounter.disconnect();
-//         }
-//     });
-//     observerCounter.observe(statsSection);
-
-
-
       
