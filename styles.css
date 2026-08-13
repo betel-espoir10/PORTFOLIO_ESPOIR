@@ -90,6 +90,15 @@ header{
 header.sticky {
   border-bottom: 1rem solid rgba(0, 0, 0, 0.2);
 }
+
+/* Taille du nom dans le header sur ordinateur. */
+.logo{
+  color: var(--light);
+  font-size: 3.6rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 @media screen and (max-width:775px){
 .logo{
   font-size: 5rem;
@@ -99,6 +108,7 @@ header.sticky {
 }
 
 .logo span{
+  font-size: 1.5rem;
   font-weight: 800;
   color: white;
 }
