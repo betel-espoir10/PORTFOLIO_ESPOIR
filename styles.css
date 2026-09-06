@@ -766,6 +766,74 @@ footer{
   display: inline-flex;
 }
 
+/* Visitor Counter Styles */
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, rgba(148, 3, 3, 0.15), rgba(32, 65, 99, 0.15));
+  border: 2px solid var(--light);
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  animation: slideIn 0.6s ease-out;
+}
+
+.visitor-counter:hover {
+  background: linear-gradient(135deg, rgba(148, 3, 3, 0.25), rgba(32, 65, 99, 0.25));
+  box-shadow: 0 0 1.5rem var(--red);
+  transform: translateY(-2px);
+  border-color: var(--link);
+}
+
+.visitor-counter i {
+  font-size: 2rem;
+  color: var(--light);
+  animation: pulse 2s infinite;
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.counter-label {
+  font-size: 1.2rem;
+  color: var(--light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.counter-value {
+  font-size: 2rem;
+  color: var(--light);
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 /* ################################## */
 /* Break Points - Elements Responsives */
 /* ################################## */
@@ -978,6 +1046,46 @@ footer{
     max-width: 100%;    
   }
   
+}
+
+/* Responsive styles for visitor counter */
+@media screen and (max-width:992px){
+  .visitor-counter {
+    padding: 0.8rem 1.5rem;
+    gap: 3rem;
+  }
+
+  .visitor-counter i {
+    font-size: 1.6rem;
+  }
+
+  .counter-label {
+    font-size: 1rem;
+  }
+
+  .counter-value {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width:550px){
+  .visitor-counter {
+    padding: 0.6rem 1.2rem;
+    gap: 1.8rem;
+    border: 1.5px solid var(--light);
+  }
+
+  .visitor-counter i {
+    font-size: 1.4rem;
+  }
+
+  .counter-label {
+    font-size: 0.9rem;
+  }
+
+  .counter-value {
+    font-size: 1.4rem;
+  }
 }
 
 
