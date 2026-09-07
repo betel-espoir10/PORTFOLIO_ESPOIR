@@ -90,9 +90,9 @@
 
 <section id="about" class="about">
 
-  <div class="about-img">
+  <!-- <div class="about-img">
     <img src="images/esp.png" alt="">
-  </div>
+  </div> -->
   <div class="about-content">
       <h3 class="section-title"
           data-lang-html="about_title">
@@ -173,63 +173,86 @@
   <section id="portfolio" class="portfolio">
     <h3 class="section-title" data-lang-html="portfolio_title">Mes <span>Projects</span></h3>
       <div class="portfolio-container">
-        
-        <div class="portfolio-box">
-            <img src="./images/login-pharma.jpg" alt="">
+
+        <div class="portfolio-box" data-project-stack="PHP, Laravel, MySQL, JavaScript, Bootstrap" data-project-github="https://github.com/betel-espoir10" data-project-live="https://betel-espoir.com">
+            <img src="./images/login-pharma.jpg" alt="Système de gestion pharmaceutique">
             <div class="portfolio-layer">
               <h4 data-lang-key="project1_title">Système de gestion pharmaceutique</h4>
               <p data-lang-key="project1_description">Pharma Logone est conçu est pour aider les phamaciens et caissiers.</p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>            
+              <a href="#" aria-label="Voir le projet pharmaceutique"><i class="fa-solid fa-link"></i></a>
+            </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="./images/esp.png" alt="">
+        <div class="portfolio-box" data-project-stack="HTML5, CSS3, JavaScript, React, Firebase" data-project-github="https://github.com/betel-espoir10" data-project-live="https://betel-espoir.com">
+            <img src="./images/esp.png" alt="Projet 2">
             <div class="portfolio-layer">
               <h4 data-lang-key="project2_title">Titre du Projet</h4>
               <p data-lang-key="project2_description">Description</p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>            
+              <a href="#" aria-label="Voir le projet 2"><i class="fa-solid fa-link"></i></a>
+            </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="./images/esp.png" alt="">
+        <div class="portfolio-box" data-project-stack="Node.js, Express, MongoDB, API REST, JavaScript" data-project-github="https://github.com/betel-espoir10" data-project-live="https://betel-espoir.com">
+            <img src="./images/esp.png" alt="Projet 3">
             <div class="portfolio-layer">
               <h4 data-lang-key="project3_title">Titre du Projet</h4>
               <p data-lang-key="project3_description">Description</p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>            
+              <a href="#" aria-label="Voir le projet 3"><i class="fa-solid fa-link"></i></a>
+            </div>
         </div>
 
-        <div class="portfolio-box">
-            <img src="./images/esp.png" alt="">
+        <div class="portfolio-box" data-project-stack="Python, Django, PostgreSQL, Tailwind, JavaScript" data-project-github="https://github.com/betel-espoir10" data-project-live="https://betel-espoir.com">
+            <img src="./images/esp.png" alt="Projet 4">
             <div class="portfolio-layer">
               <h4 data-lang-key="project4_title">Titre du Projet</h4>
               <p data-lang-key="project4_description">Description</p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>            
-        </div>   
+              <a href="#" aria-label="Voir le projet 4"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
 
-        <div class="portfolio-box">
-            <img src="./images/esp.png" alt="">
+        <div class="portfolio-box" data-project-stack="Flutter, Dart, Firebase, UI/UX Design" data-project-github="https://github.com/betel-espoir10" data-project-live="https://betel-espoir.com">
+            <img src="./images/esp.png" alt="Projet 5">
             <div class="portfolio-layer">
               <h4 data-lang-key="project5_title">Titre du Projet</h4>
               <p data-lang-key="project5_description">Description</p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>            
-        </div> 
+              <a href="#" aria-label="Voir le projet 5"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
 
-        <div class="portfolio-box">
-            <img src="./images/esp.png" alt="">
+        <div class="portfolio-box" data-project-stack="AI, Python, OpenAI, Dashboard, Data Analysis" data-project-github="https://github.com/betel-espoir10" data-project-live="https://betel-espoir.com">
+            <img src="./images/esp.png" alt="Projet 6">
             <div class="portfolio-layer">
               <h4 data-lang-key="project6_title">Titre du Projet</h4>
               <p data-lang-key="project6_description">Description</p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>            
-        </div> 
+              <a href="#" aria-label="Voir le projet 6"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
 
       </div>
   </section>
+
+  <div id="project-modal" class="project-modal" aria-hidden="true">
+    <div class="project-modal-content" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button type="button" class="close-modal" aria-label="Fermer la fenêtre">&times;</button>
+      <div class="project-modal-media">
+        <img id="project-modal-image" src="./images/esp.png" alt="Illustration du projet">
+      </div>
+      <div class="project-modal-info">
+        <h4 id="project-modal-title">Titre du projet</h4>
+        <p id="project-modal-description">Description du projet.</p>
+
+        <div class="project-modal-stack">
+          <span class="stack-label">Stack technique</span>
+          <ul id="project-modal-stack-list"></ul>
+        </div>
+
+        <div class="project-modal-actions">
+          <a id="project-modal-github" class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          <a id="project-modal-live" class="btn" href="#" target="_blank" rel="noreferrer">Visiter le site</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- ########################## -->
   <!-- Section Contact -->

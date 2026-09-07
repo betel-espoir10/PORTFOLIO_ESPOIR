@@ -99,6 +99,87 @@ window.addEventListener('scroll', () => {
 const currentLanguage = localStorage.getItem("language") || "fr";
 initTyped(currentLanguage);
 
+const projectModal = document.getElementById('project-modal');
+const projectModalTitle = document.getElementById('project-modal-title');
+const projectModalDescription = document.getElementById('project-modal-description');
+const projectModalImage = document.getElementById('project-modal-image');
+const projectModalStack = document.getElementById('project-modal-stack-list');
+const projectModalGithub = document.getElementById('project-modal-github');
+const projectModalLive = document.getElementById('project-modal-live');
+const closeModalButton = document.querySelector('.close-modal');
 
+const openProjectModal = (projectCard) => {
+  if (!projectModal || !projectCard) return;
+
+  const title = projectCard.querySelector('h4')?.textContent?.trim() || 'Projet';
+  const description = projectCard.querySelector('p')?.textContent?.trim() || 'Description du projet.';
+  const image = projectCard.querySelector('img')?.src || './images/esp.png';
+  const stackValue = projectCard.dataset.projectStack || 'HTML, CSS, JavaScript';
+  const githubLink = projectCard.dataset.projectGithub || '#';
+  const liveLink = projectCard.dataset.projectLive || '#';
+
+  projectModalTitle.textContent = title;
+  projectModalDescription.textContent = description;
+  projectModalImage.src = image;
+  projectModalImage.alt = title;
+
+  projectModalStack.innerHTML = '';
+  stackValue.split(',').map(item => item.trim()).filter(Boolean).forEach(item => {
+    const stackItem = document.createElement('li');
+    stackItem.textContent = item;
+    projectModalStack.appendChild(stackItem);
+  });
+
+  projectModalGithub.href = githubLink;
+  projectModalLive.href = liveLink;
+  projectModal.classList.add('active');
+  projectModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+};
+
+const closeProjectModal = () => {
+  if (!projectModal) return;
+
+  projectModal.classList.remove('active');
+  projectModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+};
+
+document.querySelectorAll('.portfolio-box').forEach((projectCard) => {
+  projectCard.addEventListener('click', (event) => {
+    if (event.target.closest('a')) {
+      event.preventDefault();
+      openProjectModal(projectCard);
+      return;
+    }
+    openProjectModal(projectCard);
+  });
+});
+
+document.querySelectorAll('.portfolio-layer a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const projectCard = link.closest('.portfolio-box');
+    openProjectModal(projectCard);
+  });
+});
+
+if (closeModalButton) {
+  closeModalButton.addEventListener('click', closeProjectModal);
+}
+
+if (projectModal) {
+  projectModal.addEventListener('click', (event) => {
+    if (event.target === projectModal) {
+      closeProjectModal();
+    }
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
+    closeProjectModal();
+  }
+});
 
       

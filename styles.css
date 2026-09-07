@@ -558,6 +558,141 @@ header.sticky {
   color: var(--bg2);
 }
 
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+}
+
+.project-modal.active {
+  display: flex;
+}
+
+.project-modal-content {
+  position: relative;
+  width: min(92rem, 100%);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: rgba(71, 74, 75, 0.96);
+  border: 1px solid rgba(148, 3, 3, 0.5);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 2rem rgba(148, 3, 3, 0.25);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--light);
+  font-size: 2.8rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 2;
+}
+
+.project-modal-media {
+  min-height: 34rem;
+  background: rgba(32, 65, 99, 0.25);
+}
+
+.project-modal-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-modal-info {
+  padding: 3rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-modal-info h4 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--light);
+}
+
+.project-modal-info p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: rgba(241, 241, 241, 0.9);
+  margin-bottom: 2rem;
+}
+
+.project-modal-stack {
+  margin-bottom: 2.5rem;
+}
+
+.stack-label {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#project-modal-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#project-modal-stack-list li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  background: rgba(148, 3, 3, 0.14);
+  border: 1px solid rgba(148, 3, 3, 0.4);
+  color: var(--light);
+  font-size: 1.3rem;
+}
+
+.project-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-modal-actions .btn {
+  font-size: 1.4rem;
+  padding: 1rem 1.6rem;
+}
+
+.portfolio-box {
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .project-modal-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal-info {
+    padding-top: 2.5rem;
+  }
+}
+
 /* ################################## */
 /* Section Contact */
 /* ################################## */
